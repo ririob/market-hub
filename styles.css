@@ -2,14 +2,20 @@ body{
     color: #fff;
 }
 .navbar{
-    background-color: #e9c66d;
+    background-color: #000;
 }
 .navbar > .navbar-brand > .nav-img{
-    border: solid 2px #000;
+    border: solid 2px #e7bf5a;
     border-radius: 5px;
 }
 .navbar > .navbar-brand > .nav-des{
-    color: #000;
+    color: #e7bf5a;
+}
+.navbar > .collapse > .navbar-nav > .nav-item > .nav-link{
+    color: #e7bf5a;
+}
+.navbar > .collapse > .navbar-nav > .nav-item > .nav-link:hover{
+    color: #fff;
 }
 .welcome-section{
     background-image: url(images/istockphoto-171253815-612x612.jpg);
