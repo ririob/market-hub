@@ -53,16 +53,20 @@ header:before{
                         url(../market-hub/images/background1.jpg);
     background-size: cover;
     content: "";
+    opacity: 0;
     position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
     z-index: -1;
+    /* application of keyfames made */
+    animation: fade-slide-down 2s .5s cubic-bezier(0.78, 0.5, 0.80, 1) forwards;
 }
 
 /* :after to create and slight golden curve at the end of the header div */
 header:after{
+    animation: rotate-up .5s .5s cubic-bezier(0.78, 0.5, 0.80, 1) forwards;
     background: #e7bf5a;
     content: "";
     height: 40rem;
@@ -70,8 +74,6 @@ header:after{
     position: absolute;
         right: -5%;
         top: 90%;
-    -webkit-transform: rotateZ(-4deg);
-        transform: rotateZ(-4deg);
     -webkit-transform-origin: 0 0;
         transform-origin: 0 0;
 }
@@ -100,4 +102,55 @@ header:after{
     position: relative;
         left: 20px;
         top: 30px;
+}
+
+/* keyframes */
+@keyframes fade-slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-4rem);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+/* this above keyframe animations are applied in the header:before element */
+
+/* keyframe for popping in the header contents */
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-4rem) scale(.8);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+/* this above keyframe will be added to the html elements as reuseable variable */
+
+/* keyframes for rotating the header:after element */
+@keyframes rotate-up {
+    100% {
+        transform: rotateZ(-4deg);
+    }
+}
+/* this above keyframe will be applied in the header:after pseudo-element */
+
+/* reusing the keyframes animations */
+.animate-pop-in{
+    animation: pop-in .6s cubic-bezier(0, .9, .3, 1.2) forwards;
+    /* this is to make the header contents invisible whilst the background is loading */
+    opacity: 0;
+}
+/* setting delay so that the background comes first before the header contents appear */
+.header-title{
+    animation-delay: 2s;
+}
+.header-subtitle{
+    animation-delay: 2.3s;
+}
+.header-button{
+    animation-delay: 2.4s;
 }
