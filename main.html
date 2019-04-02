@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cece's Designs</title>
     <!-- Link to CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+    <link rel="stylesheet" href="assets/CSS/reset.css">
     <!-- Link to Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- link to favicon -->
-    <link rel="shortcut icon" href="images/Screenshot (59).png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/Screenshot (59).png" type="image/x-icon">
+    <!-- link to animate.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+
 </head>
 <body>
     <!-- Navbar -->
@@ -19,8 +23,8 @@
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <!-- Title of Page(Link) -->
             <a class="navbar-brand" href="#">
-                <img src="images/Screenshot (59).png" class="nav-img" width="30" height="27"/>
-                <span class="nav-des">Cece's Designs</span>
+                <img src="assets/images/Screenshot (59).png" class="nav-img" width="35" height="40"/>
+                <span class="nav-des">Cece's Designs <br> <span class="add-nav-des">inspired by Beauty</span></span>
             </a>
             <!-- Button for toggled items -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,16 +33,11 @@
             <!-- Div for navbar contents -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- unordered list for navbar contents -->
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav ml-auto">
                     <!-- first list of navbar contents -->
                     <li class="nav-item active">
                         <!-- link to first navbar -->
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <!-- List for second navbar contents -->
-                    <li class="nav-item">
-                        <!-- link for second nav item -->
-                        <a class="nav-link" href="#">About Me</a>
                     </li>
                     <!-- List for navbar dropdown(third item in the navbar) -->
                     <li class="nav-item dropdown">
@@ -55,24 +54,15 @@
                                 <!-- div for separator in dropdown -->
                                 <div class="dropdown-divider"></div>
                                 <!-- link to last dropdown menu -->
-                                <a class="dropdown-item" href="#">Children and ladies match wears</a>
+                                <a class="dropdown-item" href="#">Match wears</a>
                             </div>
                             <!-- There can be more dropdown items if you wish to add them -->
                     </li>
-                    <!-- list for fourth content in the navbar -->
                     <li class="nav-item">
-                    <!-- link to navbar content -->
-                        <a class="nav-link" href="#" tabindex="-1">Contact me</a>
+                        <a class="nav-link" href="#">get in touch</a>
                     </li>
                     <!-- closing the unordered list tag -->
                 </ul>
-                <!-- form to search for contents in the page -->
-                <form class="form-inline my-2 my-lg-0">
-                    <!-- text field -->
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <!-- button to search -->
-                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
-                </form>
             </div>
         </nav>
     </div>
@@ -84,14 +74,21 @@
             <div class="main-section">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6" id="header-contents">
-                        <h1 class="header-title animate-pop-in">Welcome to Cece's Designs</h1>
-                        <p class="header-subtitle animate-pop-in">Beauty is our inspiration</p>
+                        <h1 class="header-title animate-pop-in">Cece's Designs</h1>
+                        <p class="header-subtitle animate-pop-in">Beauty + fashion</p>
                         <button class="btn btn-outline-warning my-2 my-sm-0 header-button animate-pop-in" type="button">Go to designs</button>
                     </div>
                 </div>
             </div>
         </section>
     </header>
+
+    <!-- scroll cue button -->
+    <div class="scroll-down-cue">
+        <a href="#">
+            <img class="animated infinite bounce cue-image" src="assets/images/down2.png" alt="See More"/>
+        </a>
+    </div>
 
 
 
